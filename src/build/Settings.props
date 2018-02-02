@@ -11,14 +11,16 @@
     <UseSharedCompilation>true</UseSharedCompilation>
 
     <RootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\'))</RootPath>
+    <!--
     <BaseOutputPath Condition="'$(BaseOutputPath)' == ''">$(RootPath)bin\</BaseOutputPath>
     <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)' == ''">$(BaseOutputPath)obj\</BaseIntermediateOutputPath>
     <BaseIntermediateOutputPath>$(BaseIntermediateOutputPath)$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)</IntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)</IntermediateOutputPath> 
 
-    <!-- We explicitly write all assemblies to a single bin directory for performance reasons -->
     <GenerateProjectSpecificOutputFolder>false</GenerateProjectSpecificOutputFolder>
+    -->
+    <!-- We explicitly write all assemblies to a single bin directory for performance reasons -->
 
     <!-- Don't allow NuGet to fallback to the implicit folder since that generates CI warnings -->
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>

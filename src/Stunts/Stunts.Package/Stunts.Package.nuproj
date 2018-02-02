@@ -12,8 +12,6 @@
     <Owners>kzu</Owners>
     <Summary>"Dynamic proxies" that can run everywhere, including mobile!</Summary>
     <Description>Design-time generated classes whose behavior can be configured dynamically at run-time with arbitrary behaviors (a.k.a. "proxies").</Description>
-    <PackageReleaseNotes>
-    </PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/moq/moq/</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/moq/moq/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>Copyright © 2017 Moq Team</Copyright>
@@ -34,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Stunts.Analyzer\Stunts.Analyzer.csproj" />
     <ProjectReference Include="..\Stunts.Sdk\Stunts.Sdk.csproj">
+      <!-- This causes the output of the Sdk project to be packaged into the analyzer folder too -->
       <AdditionalProperties>PrimaryOutputKind=Analyzers</AdditionalProperties>
     </ProjectReference>
     <ProjectReference Include="..\Stunts\Stunts.csproj" />
